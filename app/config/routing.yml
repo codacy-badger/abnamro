@@ -13,6 +13,11 @@ budget:
     type:     annotation
     prefix:   /
 
+# budgetApi:
+#     resource: "@BudgetBundle/Controller/Api"
+#     type:     annotation
+#     prefix:   /api
+
 login:
     resource: "@LoginBundle/Controller/"
     type:     annotation
