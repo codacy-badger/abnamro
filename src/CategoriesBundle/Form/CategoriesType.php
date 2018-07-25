@@ -21,12 +21,8 @@ class CategoriesType extends AbstractType
         $parents = $em
             ->getRepository('CategoriesBundle:Categories')
             ->findAllParents();
-            // );
 
         $parent = [null];
-
-        // dump($parents);
-        // exit;
 
         foreach ($parents as $par) {
             if ($par->getParent()) {
@@ -34,9 +30,6 @@ class CategoriesType extends AbstractType
             }
             $parent[$par->getId()] = $par->getName();
         }
-
-        dump($parent);
-        exit;
 
         if ($options['data']->getId()) {
             $builder->add(
